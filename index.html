@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>WriteUp Asuna Hilang Ingatan</title>
+</head>
+<body style="background-color: grey">
+<center><h1>SHL Challenge<br>Reversing Android App *apk</h1></center>
+<span style="font-size: 18px; font-style: italic;">5 November 2018 - OppaiCyber</span>
+<br>Nama File : Asuna.apk
+<br> maaf tampilannya amburadul, :(
+<h3>Tampilan appnya</h3>
+<img style="width:280px"src="https://imgur.com/nkuif1B.jpg">
+<br>----------------------------<br>
+Jujur awal lihat isi apknya cuma gini bingung,
+iseng iseng srecing di yt cari referensi nemu ini <a href="https://www.youtube.com/watch?v=rgV98YMioCA">Video</a><br>
+tcukup basa basinya langsung ke stepnya aja <br>
+<h2>Alat</h2>
+<a href="https://github.com/pxb1988/dex2jar"># Dex2jar</a><br>
+<a href="http://jd.benow.ca/"># JD-Gui</a><br>
+<a href="https://www.eclipse.org/"># Eclipse</a><br><br><br>
+<h3>Decompile apk menggunakan dex2 <br>
+<img src="https://i.imgur.com/VfXng62.png"><br>
+buka output tadi *jar menggunakan JD-Gui
+<img style="width: 1000px" src="https://i.imgur.com/wh8Uy8R.png"><br><br>
+dibagian main itu saya nggak kepikiran kalo dia nulis flag di log, di WUpnya mbak dessy bisa dilihat pake logcat<br>
+# jadi saya langsung lompat kebagian str_pertama - ketiga
+decimal 2 text > sebenernya nanti diakhir dah keliatan flagnya tanpa harus convert dulu 1 1 ke text,
+<br><img src="https://i.imgur.com/WeCFjk9.png">
+<img src="https://i.imgur.com/Lv53nNI.png">
+<img src="https://i.imgur.com/opmK45m.png">
+<img src="https://i.imgur.com/vjMpQED.png">
+<br>lalu coba lihat pada str_kedua
+<br><img src="https://i.imgur.com/l8S8rLx.png"><br><br>
+str kedua ini terdapat fungsi untuk me-random string "ABCDEF012GHIJKL345MNOPQR678STUVWXYZ9"
+dan menggabungkannya pada flag nantinya<br><br>
+dari semua diatas *str_pertama - ketiga + secret, saya susun menjadi 1 dan berikut hasilnya<br>
+<img src="https://i.imgur.com/c5r1Dxi.png">
+
+<span style="color: blue"> flag : SHL{simple_OCL1GLKS1A0__asuna_<3_me__REVERSE}
+
+
+
+</body>
+</html>
